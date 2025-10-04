@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#Home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#career">Career Profile</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- HOME -->
+    <section id="home" class="home-wrap card reveal">
+      <h1 class="name">
+        <span data-type="name" dataText="yourname">Minahil Inam</span>
+        <span class="cursor"></span>
+      </h1>
+      <div class="home-line">
+        <span data-type="line" dataText="Turning ideas into digital reality with creativity & code">
+          Turning ideas into digital reality with creativity & code
+        </span>
+      </div>
+      <p class="tagline">Clean, modern and minimal — a professional portfolio to present skills & growth.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card reveal">
+      <h2>About Me</h2>
+      <p class="about-text">
+        I’m a passionate learner and aspiring <span class="highlight">software engineer</span>. 
+        I believe technology is a powerful tool to solve real-world problems and I enjoy turning 
+        small ideas into working solutions.
+      </p>
+      <p class="about-text">
+        My journey is driven by <span class="highlight">curiosity</span>, 
+        <span class="highlight">creativity</span> and <span class="highlight">growth mindset</span>. 
+        I love experimenting with design, development, and problem solving.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card reveal">
+      <h2>Skills</h2>
+      <h3>Technical Skills</h3>
+      <div class="skill-grid">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">Git</div>
+      </div>
+
+      <h3 style="margin-top:16px">Soft Skills</h3>
+      <div class="pill-wrap">
+        <div class="pill">Communication</div>
+        <div class="pill">Teamwork</div>
+        <div class="pill">Problem Solving</div>
+        <div class="pill">Adaptability</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card reveal">
+      <h2>Projects</h2>
+      <p class="muted">Click on any project card to see more details.</p>
+      <div class="projects-grid" style="margin-top:12px">
+        <div class="project card">
+          <h3>Portfolio Website</h3>
+          <p class="muted">This very portfolio is my project!</p>
+          <div class="label">LIVE</div>
+        </div>
+        <div class="project card">
+          <h3>Web App (Coming)</h3>
+          <p class="muted">A small web app I’m currently working on.</p>
+          <div class="label">SOON</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER PROFILE -->
+    <section id="career" class="card reveal">
+      <h2>My Career Profile</h2>
+      <p class="muted">Download my resume to know more about Myself</p>
+      <a class="download-btn" href="resume.pdf" download>📄 Download Resume</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card reveal">
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <div class="contact-title">Email</div>
+          <div class="contact-value"><a href="mailto:youremail@example.com">minahilinam80@gmail.com</a></div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-title">LinkedIn</div>
+          <div class="contact-value"><a href="#">https://www.linkedin.com/in/minahil-inam-554b4234a</a></div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-title">Phone</div>
+          <div class="contact-value"><a href="#">+92 3247806907</a></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <h3 id="modal-title">Project</h3>
+      <p id="modal-desc">Details will be updated soon.</p>
+      <button id="close-modal" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

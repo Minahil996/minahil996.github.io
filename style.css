@@ -1,0 +1,101 @@
+/* Shared dark neon theme - 3 colors: charcoal, neon blue, electric purple/cyan */
+:root{
+  --bg:#0b0f14;         /* charcoal */
+  --card:#11161b;
+  --muted:#9aa6b3;
+  --neon-blue:#085779;  /* accent */
+  --neon-purple:#4310ea;/* second accent */
+  --glass: rgba(104, 45, 45, 0.03);
+  --radius:14px;
+  --trans: 420ms cubic-bezier(.2,.9,.3,1);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:
+    radial-gradient(700px 300px at 10% 10%, rgba(56,189,248,0.04), transparent),
+    radial-gradient(700px 300px at 90% 90%, rgba(167,139,250,0.03), transparent),
+    var(--bg);
+  color:#eaf2ff;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  scroll-behavior:smooth;
+}
+
+/* HEADER NAV */
+header{position:sticky; top:12px; display:flex; justify-content:center; z-index:80; padding:10px}
+nav{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:8px 14px; border-radius:999px; box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+nav ul{display:flex; gap:8px; list-style:none; margin:0; padding:0}
+nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:999px; font-weight:600; font-size:14px}
+nav a:hover{color:var(--neon-blue); background:var(--glass)}
+nav a.active{color:var(--neon-purple); box-shadow:0 6px 22px rgba(167,139,250,0.06)}
+
+/* PAGE WRAPPER */
+.container{max-width:1020px; margin:36px auto; padding:18px}
+
+/* HOME */
+.home-wrap{min-height:56vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; text-align:center; padding:48px; border-radius:14px}
+.name{font-size:36px; font-weight:800; letter-spacing:-0.6px}
+.name .accent{background:linear-gradient(90deg,var(--neon-blue),var(--neon-purple)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.tagline{color:var(--muted); font-size:16px; max-width:760px}
+.home-line{font-size:18px; color:var(--neon-blue); letter-spacing:0.2px; margin-top:6px; text-shadow:0 6px 24px rgba(56,189,248,0.06)}
+
+/* CARDS */
+.card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01)); padding:18px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.02)}
+h1,h2,h3{margin:0 0 10px 0}
+
+/* ABOUT */
+.about-text{color:var(--muted); font-size:15px; line-height:1.6}
+.highlight{color:var(--neon-blue); font-weight:700}
+
+/* GRID */
+.grid-two{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+@media(max-width:860px){ .grid-two{grid-template-columns:1fr} .home-wrap{padding:28px} }
+
+/* SKILLS */
+.skill-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:10px}
+.skill-card{padding:12px; border-radius:12px; background:transparent; border:1px solid rgba(255,255,255,0.03); text-align:center; font-weight:700; color:var(--muted); transition:transform var(--trans), border-color var(--trans), background var(--trans)}
+.skill-card:hover{transform:translateY(-8px); border-color:rgba(56,189,248,0.18); background:linear-gradient(90deg, rgba(56,189,248,0.03), rgba(167,139,250,0.02)); color:#eaf2ff}
+
+/* SOFT SKILLS (pills) */
+.pill-wrap{display:flex; gap:8px; flex-wrap:wrap}
+.pill{padding:8px 12px; border-radius:999px; background:transparent; border:1px solid rgba(255,255,255,0.03); color:var(--muted); font-weight:700; transition:all var(--trans)}
+.pill:hover{background:linear-gradient(90deg,var(--neon-blue),var(--neon-purple)); color:#02131a; transform:translateY(-6px)}
+
+/* PROJECTS */
+.projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+.project{position:relative; padding:18px; border-radius:12px; overflow:hidden; cursor:pointer; transition:transform var(--trans), box-shadow var(--trans)}
+.project:hover{transform:translateY(-8px); box-shadow:0 20px 40px rgba(2,6,23,0.6)}
+.project .label{font-weight:800; color:rgba(255,255,255,0.06); position:absolute; right:8px; bottom:8px; font-size:20px}
+
+/* RESUME / CAREER */
+.resume-cta{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.download-box{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.04); display:inline-flex; gap:10px; align-items:center}
+.download-btn{background:linear-gradient(90deg,var(--neon-blue),var(--neon-purple)); color:#071019; padding:12px 18px; border-radius:10px; font-weight:800; text-decoration:none; transition:transform var(--trans); box-shadow:0 10px 30px rgba(56,189,248,0.06)}
+.download-btn:hover{transform:translateY(-6px); box-shadow:0 20px 60px rgba(167,139,250,0.08)}
+
+/* CONTACT BOXES */
+.contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:12px}
+.contact-box{padding:16px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.025); transition:transform var(--trans), box-shadow var(--trans)}
+.contact-box:hover{transform:translateY(-8px); box-shadow:0 18px 40px rgba(56,189,248,0.06); border-color:rgba(56,189,248,0.12)}
+.contact-title{font-weight:800; color:var(--neon-blue)}
+.contact-value{color:var(--muted); margin-top:6px}
+
+/* FOOTER */
+.footer-note{margin-top:22px; text-align:center; color:var(--muted); font-size:14px}
+
+/* typing cursor */
+.cursor{display:inline-block; width:3px; height:20px; background:var(--neon-blue); margin-left:8px; vertical-align:middle; animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* reveal animation */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity 650ms ease, transform 650ms ease}
+.reveal.visible{opacity:1; transform:none}
+
+/* modal */
+.modal{position:fixed; inset:0; display:none; place-items:center; background:rgba(2,6,23,0.6); z-index:120}
+.modal.open{display:grid}
+.modal-card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01)); padding:22px; border-radius:12px; width:92%; max-width:520px; text-align:center}
+.close-btn{background:transparent; border:0; color:var(--muted); font-weight:700; cursor:pointer}
