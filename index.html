@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoLife – Sustainable Living</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    // 🌙 Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    // ✅ Button Function
+    function goToSignup() {
+      window.location.href = "signup.html";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 🌿 HEADER -->
+  <header>
+    <div class="logo">🌿 EcoLife</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="signup.html" class="highlight">Sign Up</a>
+      <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+    </nav>
+  </header>
+
+  <!-- 🌱 HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text fade-in">
+      <h1>Empowering You to Live Sustainably, Every Day.</h1>
+      <p>
+        Take control of your eco-journey with EcoLife — track habits, learn green tips,
+        and join a community that’s changing the world one action at a time.
+      </p>
+      <button onclick="goToSignup()">Get Started</button>
+    </div>
+
+    <!-- 🌿 Greenery Hero Image -->
+    <div class="hero-img zoom-in">
+      <img
+        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80"
+        alt="Green Nature"
+      />
+    </div>
+  </section>
+
+  <!-- 🌎 FEATURES SECTION -->
+  <section id="features" class="features">
+    <h2>What Makes EcoLife Special 🌍</h2>
+    <div class="feature-container">
+      <div class="feature slide-up">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+          alt="Track Progress"
+        />
+        <h3>Track Your Progress</h3>
+        <p>
+          Monitor your eco-friendly actions and see your sustainability score grow.
+        </p>
+      </div>
+
+      <div class="feature slide-up">
+        <img
+          src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&q=80"
+          alt="Eco Tips"
+        />
+        <h3>Eco-Friendly Tips</h3>
+        <p>
+          Discover smart green living ideas, recycling hacks, and daily sustainability inspiration.
+        </p>
+      </div>
+
+      <div class="feature slide-up">
+        <img
+          src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80"
+          alt="Community"
+        />
+        <h3>Community Support</h3>
+        <p>
+          Connect with other eco-warriors and grow together toward a cleaner planet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Us 📬</h2>
+    <p>Have questions or feedback? We’d love to hear from you!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ⚙️ FOOTER -->
+  <footer>
+    <p>© 2025 EcoLife. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
